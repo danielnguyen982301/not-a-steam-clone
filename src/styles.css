@@ -1,0 +1,606 @@
+.App {
+  font-family: sans-serif;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+:root {
+  box-sizing: border-box;
+}
+
+*,
+::after,
+::before {
+  box-sizing: inherit;
+}
+
+body {
+  height: 100vh;
+  width: 100vw;
+  background: #303047;
+  margin: 0;
+  padding: 0;
+}
+
+.bullet {
+  cursor: pointer;
+  height: 5px;
+  width: 25px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 10%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active,
+.bullet:hover {
+  background-color: #717171;
+}
+
+.bullet-container {
+  text-align: center;
+}
+
+.homepage-content {
+  margin: 0 auto;
+}
+
+.header {
+  background-color: #171d25;
+  padding: 0;
+  margin: 0;
+}
+
+.header-content {
+  display: flex;
+  width: 100%;
+  height: 104px;
+  margin: 0 auto;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.header-nav a {
+  text-decoration: none;
+  color: #dcdedf;
+  font-size: 16px;
+  font-weight: bold;
+  padding: 8px;
+}
+
+.header-nav a:first-child {
+  color: #1a9fff;
+  text-decoration: underline;
+}
+
+.steam-logo img {
+  width: 176px;
+  height: 44px;
+}
+
+.steam-logo {
+  cursor: pointer;
+}
+
+.header-action {
+  align-self: flex-start;
+  margin-top: 6px;
+}
+
+.header-action a,
+span {
+  text-decoration: none;
+  color: #b8b6b4;
+  padding: 6px;
+}
+
+.header-action .install-action {
+  color: #e5e4dc;
+  background-color: rgb(62, 170, 8);
+  font-size: 12px;
+}
+
+.body-nav {
+  width: 100%;
+  background-color: #ff6680;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 40px;
+}
+
+.nav-area {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #3355ff;
+  height: 40px;
+}
+
+.nav-area a {
+  color: #e5e5e5;
+  font-size: 13px;
+  font-weight: bold;
+  padding: 12px;
+}
+
+.dropdown {
+  position: relative;
+}
+
+.dropdown-headers {
+  display: flex;
+  align-items: center;
+}
+
+.categories-dropdown {
+  position: absolute;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  background-color: #b8b6b4;
+}
+
+.dropdown-genres {
+  justify-content: space-between;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.genres-text {
+  color: rgba(0, 149, 255, 0.792);
+  font-weight: bold;
+  padding: 10px;
+}
+
+.dropdown-genre {
+  font-weight: bold;
+  font-size: 14px;
+  padding: 10px;
+  margin: 10px;
+  background-color: blue;
+  color: whitesmoke;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.dropdown-genre:hover {
+  background-color: yellow;
+  color: red;
+}
+
+.search-form {
+  position: relative;
+}
+
+.search-field {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.search-form input {
+  width: 60%;
+}
+
+.body-container {
+  flex-grow: 1;
+  background: #303047;
+  position: relative;
+  margin: 0;
+}
+
+.body-content-container {
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%, 0);
+  width: 50%;
+}
+
+.gutter-box {
+  position: absolute;
+  left: 4%;
+  width: 20%;
+}
+
+.gutter-box a {
+  text-decoration: none;
+  display: block;
+  padding: 2px;
+  color: #7a8b9d;
+  cursor: pointer;
+}
+
+.gutter-box a:hover {
+  color: cyan;
+}
+
+.gutter-section {
+  padding: 15px;
+}
+
+.gutter-title {
+  font-weight: bold;
+  color: #536f86;
+  padding: 5px 0px;
+}
+
+.gift-card {
+  color: #0099e6;
+}
+
+.gift-card > div {
+  color: white;
+}
+
+.gift-card img {
+  width: 179px;
+}
+
+.gutter-box,
+.gutter-section,
+.gutter-title,
+.gift-card {
+  font-size: 1rem;
+}
+
+.gift-card > div,
+.gutter-section a {
+  font-size: 0.875em;
+}
+
+.carousel {
+  position: relative;
+}
+
+.left-arrow {
+  background-color: white;
+  position: absolute;
+  cursor: pointer;
+  bottom: 50%;
+  transform: translate(-100%, 50%);
+}
+
+.left-arrow img {
+  width: 23px;
+  height: 36px;
+}
+
+.right-arrow {
+  background-color: white;
+  position: absolute;
+  cursor: pointer;
+  bottom: 50%;
+  right: 0;
+  transform: translate(100%, 50%);
+}
+
+.right-arrow img {
+  width: 23px;
+  height: 36px;
+  transform: rotate(180deg);
+}
+
+.right-arrow:hover,
+.left-arrow:hover {
+  background-color: cyan;
+}
+
+.carousel-container {
+  width: 100%;
+  height: 100%;
+}
+
+.carousel-item,
+.item-container {
+  cursor: pointer;
+}
+
+.carousel-item-img,
+.game-img {
+  width: 100%;
+}
+
+.carousel-item-img img,
+.game-img img {
+  width: 100%;
+  height: 100%;
+}
+
+.carousel-item-info {
+  background-color: #171d25;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.carousel-item-name {
+  max-height: 62px;
+  overflow: hidden;
+  font-size: 24px;
+  font-weight: 300;
+  padding: 10px;
+  color: white;
+}
+
+.carousel-price-and-platform {
+  font-size: 13px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  color: white;
+}
+
+.carousel-platform-list {
+  display: flex;
+}
+
+.platform {
+  margin: 5px;
+}
+
+.body-content-title {
+  color: white;
+  font-size: 1rem;
+  padding: 15px 0;
+}
+
+.game-genre,
+.game-description,
+.main-game-info,
+.game-tag-list span {
+  color: white;
+}
+
+.outer-game-info-container {
+  min-width: 60%;
+  height: 100%;
+}
+
+.game-info-container,
+.item-container {
+  display: flex;
+  width: 100%;
+}
+
+.main-game-info {
+  background-color: #171d25;
+  width: 100%;
+}
+
+.game-info {
+  font-size: 12px;
+  padding: 0 0 5px 10px;
+}
+
+.game-description {
+  font-size: 14px;
+  padding: 10px 10px 20px 10px;
+}
+
+.game-tag-list-container {
+  width: 100%;
+  background-color: #171d25;
+  margin-top: 15px;
+}
+
+.game-tag-list-container div {
+  color: white;
+  font-size: 12px;
+}
+
+.game-tag {
+  background-color: #3377ff;
+  border-radius: 10%;
+  padding: 5px;
+  margin: 5px;
+}
+
+.tag-header {
+  padding: 10px;
+}
+
+.game-tag-list {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.single-game-genre-list {
+  font-size: 15px;
+  display: flex;
+  padding: 5px;
+  align-items: center;
+  color: white;
+  flex-wrap: wrap;
+}
+
+.single-game-genre {
+  font-size: 15px;
+  color: white;
+  padding: 5px;
+  text-transform: uppercase;
+  text-decoration: underline;
+}
+
+.item-img {
+  width: 25%;
+  height: 100%;
+}
+
+.item-img img {
+  width: 100%;
+  height: 100%;
+}
+
+.item-basic-info {
+  width: 100%;
+  background-color: #171d25;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.basic-info {
+  color: white;
+  margin-left: 10px;
+}
+
+.item-name {
+  margin-top: 5px;
+}
+
+.item-price {
+  margin-bottom: 5px;
+}
+
+.item-container {
+  height: 5%;
+  margin: 12px 0;
+}
+
+.suggested-list {
+  height: auto;
+  width: 150%;
+  right: 0;
+  position: absolute;
+  z-index: 1;
+  background-color: grey;
+}
+
+.suggested-list .basic-info {
+  font-size: 12px;
+}
+
+.suggested-list .item-img {
+  height: auto;
+}
+
+.search-field img {
+  width: 18px;
+  height: 18px;
+}
+
+.single-game-genre,
+.game-tag {
+  display: block;
+  cursor: pointer;
+}
+
+.single-game-genre:hover {
+  color: cyan;
+}
+
+.game-tag:hover {
+  background-color: yellow;
+  color: red;
+}
+
+.item-container:hover,
+.item-basic-info:hover {
+  background-color: wheat;
+}
+
+.item-basic-info:hover div {
+  color: black;
+}
+
+.return-home-button {
+  font-size: 13px;
+  color: skyblue;
+  padding-top: 10px;
+  cursor: pointer;
+}
+
+.return-home-button:hover {
+  color: white;
+  text-decoration: underline;
+}
+
+@media screen and (max-width: 540px) {
+  .steam-logo img {
+    width: 60px;
+    height: 20px;
+  }
+  .header-content {
+    height: 60px;
+  }
+
+  .header-nav a {
+    font-size: 10px;
+  }
+
+  .install-action,
+  .header-action span {
+    display: none;
+  }
+
+  .header-action a {
+    font-size: 8px;
+  }
+
+  .body-nav {
+    padding: 20px 0;
+  }
+
+  .dropdown-headers a {
+    font-size: 7px;
+  }
+
+  .body-content-container {
+    width: 100%;
+  }
+
+  .left-arrow {
+    bottom: 0;
+    transform: translate(0, 100%);
+  }
+
+  .left-arrow img {
+    height: 15px;
+  }
+
+  .right-arrow {
+    bottom: 0;
+    transform: translate(0, 100%);
+  }
+
+  .right-arrow img {
+    height: 15px;
+  }
+
+  .item-container {
+    height: 3%;
+  }
+
+  .suggested-list {
+    width: 200%;
+  }
+
+  .suggested-list .basic-info {
+    font-size: 9px;
+  }
+
+  .basic-info {
+    font-size: 10px;
+  }
+
+  .main-game-info div {
+    font-size: 11px;
+  }
+
+  .single-game-genre {
+    font-size: 13px;
+  }
+
+  .gutter-box {
+    display: none;
+  }
+
+  .dropdown-genre {
+    font-size: 10px;
+  }
+}
