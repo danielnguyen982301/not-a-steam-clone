@@ -124,7 +124,7 @@ span {
   color: #e5e5e5;
   font-size: 13px;
   font-weight: bold;
-  padding: 12px;
+  padding: 10px;
 }
 
 .dropdown {
@@ -136,7 +136,12 @@ span {
   align-items: center;
 }
 
+.categories:hover {
+  background-color: grey;
+}
+
 .categories-dropdown {
+  top: 36px;
   position: absolute;
   z-index: 2;
   display: flex;

@@ -25,6 +25,7 @@ export default function BodyNav(props) {
             <a>Your Store</a>
             <a>New & Noteworthy</a>
             <a
+              className="categories"
               onClick={props.showDropdown}
               style={{ cursor: "pointer" }}
               onMouseLeave={props.hideDropdown}
